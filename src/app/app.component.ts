@@ -60,13 +60,13 @@ export class AppComponent {
           console.log('removeTodo: ' + todoIn);
           let index = 0;
   
-      this.todoList.map((todo, i) => {
+      this.todo.map((todo, i) => {
         if (todo.task === todoIn) {
           index = i;
         }
         return index;
       });
-      this.todoList.splice(index, 1);
+      this.todo.splice(index, 1);
     }
   
     //completeTodo function will give true value to completed tasks and add in tpo array :
