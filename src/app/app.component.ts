@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Todo } from 'todo';
 
 
@@ -6,9 +6,8 @@ import { Todo } from 'todo';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  
+  encapsulation: ViewEncapsulation.None
 })
-
 
 
 export class AppComponent {
@@ -42,14 +41,20 @@ export class AppComponent {
           },
     ];
 
+    // creating string that saves value from input  and then its added to addTodo function
+    inputModel:string = "";   
 
     // ------------------------  Functions to add, remove, complete and search ---------------------------------------
     // addTodo function
-    addTodo(todo: Todo): void {
-      this.todoList = [...this.todoList, todo];
+    addTodo(): void {
+     
+       this.todo.push({
+        task : this.inputModel,
+        completed : false
+    });
+    
     }
   
-
     // removeTodo function will map the index and then splice value using that index :
     removeTodo(todoIn: string): void {
           console.log('removeTodo: ' + todoIn);
@@ -96,4 +101,4 @@ export class AppComponent {
     }
 
 
-}
+}  

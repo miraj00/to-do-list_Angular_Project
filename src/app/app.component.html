@@ -1,3 +1,5 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
 
 <h1> To-Do List</h1>
 <h3> A place to store your todos</h3>
@@ -20,9 +22,22 @@
 </div>
 
 <br> 
+
+
+<!--  adding #userForm    and (ngModel) helps take input name value and pass 
+      i to component --> 
+<form  #userForm = "ngForm">
 <div class="addTask">
   <label>Enter a new task : </label> <br>
-  <input name="task" placeholder="Add your to-do"  />
+  <input name="newtask" type = "text" placeholder="Add your to-do" 
+  [(ngModel)]="inputModel"  />
 </div> 
 <br>
-<button type="submit"  >Add</button>
+
+</form>
+<button type="submit" (click)="addTodo()" >Add</button>
+
+</div>
+</div>
+
+
