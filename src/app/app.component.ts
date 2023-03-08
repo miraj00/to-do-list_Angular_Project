@@ -44,6 +44,14 @@ export class AppComponent {
     // creating string that saves value from input  and then its added to addTodo function
     inputModel:string = "";   
 
+     stuffIsCompleted : boolean = false;
+    // style="text-decoration: line-through"
+
+    // html --->  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false"
+    // isButtonVisible : boolean = true;
+   
+
+   
     // ------------------------  Functions to add, remove, complete and search ---------------------------------------
     // addTodo function
     addTodo(): void {
@@ -71,6 +79,9 @@ export class AppComponent {
   
     //completeTodo function will give true value to completed tasks and add in tpo array :
     completeTodo(todo: string, i: number): void {
+
+       
+      
           let tempTodo = {
             task: todo,
             completed: true,
@@ -80,6 +91,7 @@ export class AppComponent {
           // console log to check out put  
           console.log(this.completedTodos);
 
+         
     }
   
     // searchList function :
@@ -101,3 +113,9 @@ export class AppComponent {
 
 
 }  
+
+function stuffCompleted() {
+  
+  
+}
+

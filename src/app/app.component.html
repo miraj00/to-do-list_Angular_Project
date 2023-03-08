@@ -18,10 +18,8 @@
 
 <div *ngFor="let list of todo; index as i">
   
-  <tr> {{ i + 1 }}. <button (click)="completeTodo(list.task, i)"
-        ng-click="stuff.completed = true"
-              > Complete</button>
-  <span ng-class="{strikeItem: stuff.completed}">  {{list.task}}  </span> 
+  <tr> {{ i + 1 }}. <button (click)="completeTodo(list.task, i)"  > Complete</button>
+  <span *ngIf ="stuffIsCompleted === false" >  {{list.task}}  </span> 
   &nbsp; &nbsp; &nbsp; <button (click)="removeTodo(list.task)">X</button>
 </tr> <br>
 </div>
