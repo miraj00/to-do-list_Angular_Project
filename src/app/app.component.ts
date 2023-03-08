@@ -36,7 +36,7 @@ export class AppComponent {
             completed: false,
           },
           {
-            task: 'Do Vacuum',
+            task: 'Do Vaccum',
             completed: false,
           },
     ];
@@ -75,12 +75,11 @@ export class AppComponent {
             task: todo,
             completed: true,
           };
-  
-         console.log(this.todoList[i]);
-  
-      this.todoList[i].completed = !this.todoList[i].completed;
-  
-      this.completedTodos = [...this.completedTodos, tempTodo];
+          // this adds completed task in to new array and saves it  
+          this.completedTodos = [...this.completedTodos, tempTodo];
+          // console log to check out put  
+          console.log(this.completedTodos);
+
     }
   
     // searchList function :

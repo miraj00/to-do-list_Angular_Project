@@ -1,5 +1,12 @@
 
 body {
 
-    background-color : linear-gradient(to right, #f857a6, #ff5858);
-  }
+ /* background-color : -moz-linear-gradient(to right, #f857a6, #ff5858);  */
+    background-color : #ff5858; 
+  
+ }
+
+
+ .strikeItem {
+    text-decoration: line-through;
+ }

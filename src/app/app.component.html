@@ -1,6 +1,9 @@
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
 
+
+
+<div class="card"  style="width: 25%;">
+
+  <div class="card-body">
 <h1> To-Do List</h1>
 <h3> A place to store your todos</h3>
 
@@ -15,8 +18,10 @@
 
 <div *ngFor="let list of todo; index as i">
   
-  <tr> {{ i + 1 }}. <button (click)="completeTodo(list.task, i)"> Complete</button>
-  <span>  {{list.task}}  </span> 
+  <tr> {{ i + 1 }}. <button (click)="completeTodo(list.task, i)"
+        ng-click="stuff.completed = true"
+              > Complete</button>
+  <span ng-class="{strikeItem: stuff.completed}">  {{list.task}}  </span> 
   &nbsp; &nbsp; &nbsp; <button (click)="removeTodo(list.task)">X</button>
 </tr> <br>
 </div>
@@ -35,9 +40,8 @@
 <br>
 
 </form>
-<button type="submit" (click)="addTodo()" >Add</button>
+<button type="submit" id="addButton" (click)="addTodo()" >Add</button>
 
 </div>
 </div>
-
 
