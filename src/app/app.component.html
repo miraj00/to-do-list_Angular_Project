@@ -7,12 +7,14 @@
 
 <div class="searchContainer">
      <label></label>
-     <input name="task" size="42" placeholder="Filter your to-do..."   />
+     <input name="task" size="42" placeholder="Filter your to-do..."  />
 </div> 
 
 <br>
 
-<div *ngFor="let list of todo; index as i">
+<div *ngFor="let list of todo; index as i"
+[ngClass]="filteredIndexes.includes(i) ? 'hide' : ''"
+>
   
   <div class="row">
   
@@ -22,6 +24,7 @@
 
           <div class="column middle" >  
           <button (click)="completeTodo(i)" *ngIf="!list.completed" id="buttonStyle"> Complete</button>
+          <!--  ngClass comdition added for line-through css style feature-->
           <span [ngClass]="list.completed ? 'completedTask':''" >  {{list.task}}  </span> 
           </div>
 

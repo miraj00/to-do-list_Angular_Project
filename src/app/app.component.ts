@@ -14,12 +14,8 @@ export class AppComponent {
  
       title = 'To-Do-List';
 
-     // todoList: Todo[] = [];
-
-    //  completedTodos: Todo[] = [];
-
       filteredIndexes: number[] = [];
-      filteredList: Todo[] = [];
+ 
 
   // Pre inserted array 
       todo :Todo [] = [
@@ -45,11 +41,6 @@ export class AppComponent {
     inputModel:string = "";   
 
      stuffIsCompleted : boolean = false;
-    // style="text-decoration: line-through"
-
-    // html --->  *ngIf="this.isButtonVisible" (click)="this.isButtonVisible = false"
-    // isButtonVisible : boolean = true;
-   
 
    
     // ------------------------  Functions to add, remove, complete and search ---------------------------------------
@@ -81,41 +72,9 @@ export class AppComponent {
     completeTodo(i: number): void {
 
         this.todo[i].completed=true;
-      
-          // let tempTodo = {
-          //   task: todo,
-          //   completed: true,
-          // };
-          // this adds completed task in to new array and saves it  
-          //this.completedTodos = [...this.completedTodos, tempTodo];
-          // console log to check out put  
-          //console.log(this.completedTodos);
-
          
     }
   
-    // searchList function :
-    searchList(search: string) {
-          this.filteredIndexes = [];
-  
-      if (search === '') {
-        console.log('search empty');
-      } else {
-        this.todo.forEach((todo, i) => {
-          !todo.task.toLowerCase().includes(search.toLowerCase()) &&
-            this.filteredIndexes.push(i);
-        });
-        // console.log(this.filteredIndexes);
-      }
-
-
-    }
-
 
 }  
-
-function stuffCompleted() {
-  
-  
-}
 
