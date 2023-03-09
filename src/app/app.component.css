@@ -1,8 +1,8 @@
 
 body {
 
- /* background-color : -moz-linear-gradient(to right, #f857a6, #ff5858);  */
-    background-color : #ff5858; 
+  background : linear-gradient(to right, #f857a6, #ff5858);  
+   /* background-color : #ff5858; */
   
  }
 
