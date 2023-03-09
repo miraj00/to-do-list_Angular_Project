@@ -21,7 +21,7 @@
           </div>
 
           <div class="column middle" >  
-          <button (click)="completeTodo(list.task, i)"  id="buttonStyle"> Complete</button>
+          <button (click)="completeTodo(i)" *ngIf="!list.completed" id="buttonStyle"> Complete</button>
           <span *ngIf ="stuffIsCompleted === false" >  {{list.task}}  </span> 
           </div>
 

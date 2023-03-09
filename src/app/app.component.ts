@@ -14,9 +14,9 @@ export class AppComponent {
  
       title = 'To-Do-List';
 
-      todoList: Todo[] = [];
+     // todoList: Todo[] = [];
 
-      completedTodos: Todo[] = [];
+    //  completedTodos: Todo[] = [];
 
       filteredIndexes: number[] = [];
       filteredList: Todo[] = [];
@@ -78,18 +78,18 @@ export class AppComponent {
     }
   
     //completeTodo function will give true value to completed tasks and add in tpo array :
-    completeTodo(todo: string, i: number): void {
+    completeTodo(i: number): void {
 
-       
+        this.todo[i].completed=true;
       
-          let tempTodo = {
-            task: todo,
-            completed: true,
-          };
+          // let tempTodo = {
+          //   task: todo,
+          //   completed: true,
+          // };
           // this adds completed task in to new array and saves it  
-          this.completedTodos = [...this.completedTodos, tempTodo];
+          //this.completedTodos = [...this.completedTodos, tempTodo];
           // console log to check out put  
-          console.log(this.completedTodos);
+          //console.log(this.completedTodos);
 
          
     }
@@ -101,7 +101,7 @@ export class AppComponent {
       if (search === '') {
         console.log('search empty');
       } else {
-        this.todoList.forEach((todo, i) => {
+        this.todo.forEach((todo, i) => {
           !todo.task.toLowerCase().includes(search.toLowerCase()) &&
             this.filteredIndexes.push(i);
         });
