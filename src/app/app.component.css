@@ -7,6 +7,6 @@ body {
  }
 
 
- .strikeItem {
-    text-decoration: line-through;
- }
+ .completedTask{
+   text-decoration: line-through;
+}

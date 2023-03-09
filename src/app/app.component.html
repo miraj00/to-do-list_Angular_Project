@@ -22,7 +22,7 @@
 
           <div class="column middle" >  
           <button (click)="completeTodo(i)" *ngIf="!list.completed" id="buttonStyle"> Complete</button>
-          <span *ngIf ="stuffIsCompleted === false" >  {{list.task}}  </span> 
+          <span [ngClass]="list.completed ? 'completedTask':''" >  {{list.task}}  </span> 
           </div>
 
           <div class="column right" >
